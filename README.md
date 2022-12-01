@@ -1,2 +1,2 @@
 # meals-to-grab-app
-An react native app
+A react native app
