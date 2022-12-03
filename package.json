@@ -15,7 +15,10 @@
               "react-native": "0.70.5"
        },
        "devDependencies": {
-              "@babel/core": "^7.12.9"
+              "@babel/core": "^7.12.9",
+              "eslint": "^8.29.0",
+              "eslint-plugin-react": "^7.31.11",
+              "eslint-plugin-react-native": "^4.0.0"
        },
        "private": true
 }
