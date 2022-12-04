@@ -1,17 +1,11 @@
-import { StyleSheet, View } from "react-native";
+import ExpoStatusBar from "expo-status-bar/build/ExpoStatusBar";
+import RestaurantsScreen from "./src/features/restaurants/screens/restaurants.screen";
 
 export default function App() {
        return (
-              <View style={styles.container}>
-              </View>
+              <>
+                     <RestaurantsScreen />
+                     <ExpoStatusBar style="auto" />
+              </>
        );
 }
-
-const styles = StyleSheet.create({
-       container: {
-              flex: 1,
-              backgroundColor: "#fff",
-              alignItems: "center",
-              justifyContent: "center",
-       },
-});
