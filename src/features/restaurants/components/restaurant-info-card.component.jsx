@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSheet, View } from "react-native";
 import { Card, Paragraph, Title } from "react-native-paper";
 
-function RestaurantInfo({restaurant = {}}) {
+function RestaurantInfoCard({restaurant = {}}) {
        const {
               name = "Tatva Pure Veg Restaurant",
               icon,
@@ -17,7 +17,7 @@ function RestaurantInfo({restaurant = {}}) {
 
        return (
               <>
-                     <Card style={styles.container}>
+                     <Card style={styles.container} elevation={5}>
                             <Card.Content>
                                    <Card.Cover source={{uri: photos[0]}} />
                                    <View>
@@ -34,7 +34,7 @@ function RestaurantInfo({restaurant = {}}) {
        );
 }
 
-export default RestaurantInfo;
+export default RestaurantInfoCard;
 
 const styles = StyleSheet.create({
        container: {
