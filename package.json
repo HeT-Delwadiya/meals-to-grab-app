@@ -14,6 +14,7 @@
     "@expo/vector-icons": "^13.0.0",
     "@react-navigation/bottom-tabs": "^6.5.1",
     "@react-navigation/native": "^6.1.1",
+    "camelize": "^1.0.1",
     "expo": "~47.0.8",
     "expo-font": "~11.0.1",
     "expo-status-bar": "~1.4.2",

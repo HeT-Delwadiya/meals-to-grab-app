@@ -16,7 +16,7 @@ function RestaurantInfoCard({restaurant = {}}) {
               address = "100 Balewadi High Street",
               ratings = 4.2,
               isOpenNow = true,
-              isClosed = false
+              isClosedTemporarily = false
        } = restaurant;
 
        return (
@@ -33,7 +33,7 @@ function RestaurantInfoCard({restaurant = {}}) {
                                           </Ratings>
                                           <Details>
                                                  {isOpenNow && <SvgXml xml={open} width="20px" height="20px" />}
-                                                 {isClosed && <Text variant="error">CLOSED TEMPORARILY</Text>}
+                                                 {isClosedTemporarily && <Text variant="error">CLOSED TEMPORARILY</Text>}
                                                  <Icon source={{ uri: icon }} />
                                           </Details>
                                    </Section>

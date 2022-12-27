@@ -13,6 +13,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { NavigationContainer } from "@react-navigation/native";
 import { SafeArea } from "./src/components/utils/safe-area.component";
 import { Text } from "./src/components/typography/text.component";
+import { RestaurantsContextProvider } from "./src/services/restaurants/restaurants.context";
 
 export default function App() {
        
@@ -63,13 +64,15 @@ export default function App() {
        return (
               <>
                      <ThemeProvider theme={theme}>
-                            <NavigationContainer>
-                                   <Tab.Navigator screenOptions={createScreenOptions} >
-                                          <Tab.Screen name="Restaurants" component={RestaurantsScreen} options={{ headerShown: false }} />
-                                          <Tab.Screen name="Map" component={MapScreen} options={{ headerShown: false }} />
-                                          <Tab.Screen name="Settings" component={SettingsScreen} options={{ headerShown: false }} />
-                                   </Tab.Navigator>
-                            </NavigationContainer>
+                            <RestaurantsContextProvider>
+                                   <NavigationContainer>
+                                          <Tab.Navigator screenOptions={createScreenOptions} >
+                                                 <Tab.Screen name="Restaurants" component={RestaurantsScreen} options={{ headerShown: false }} />
+                                                 <Tab.Screen name="Map" component={MapScreen} options={{ headerShown: false }} />
+                                                 <Tab.Screen name="Settings" component={SettingsScreen} options={{ headerShown: false }} />
+                                          </Tab.Navigator>
+                                   </NavigationContainer>
+                            </RestaurantsContextProvider>
                      </ThemeProvider>
                      <ExpoStatusBar style="auto" />
               </>
